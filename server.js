@@ -51,6 +51,7 @@ app.use(sesseionOptions)
 app.use(flash())
 
 app.use(helmet())
+app.use(helmet.referrerPolicy({policy: ["origin", "unsafe-url"]}));
 /*
 Helmet é um middleware para aplicações Node.js que ajuda a proteger sua aplicação web configurando de forma adequada os HTTP headers de segurança. Ele fornece uma camada extra de proteção contra vulnerabilidades comuns, como Cross-Site Scripting (XSS), clickjacking e ataques de injeção de código.
 */
